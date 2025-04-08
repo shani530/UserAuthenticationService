@@ -1,10 +1,18 @@
 package com.example.userauthenticationservice.service;
 
+import com.example.userauthenticationservice.model.User;
+import org.springframework.stereotype.Service;
+
+@Service
 public class UserServiceImpl implements UserService {
     // add a method to save the user
-    public String saveUser() {
+
+
+    @Override
+    public String saveUser(User user) {
         return "User saved";
     }
+
     // add a method to get the current user
     public String getCurrentUser() {
         return "Current user";
