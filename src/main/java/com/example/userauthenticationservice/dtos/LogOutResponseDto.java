@@ -7,4 +7,6 @@ import lombok.Setter;
 @Setter
 public class LogOutResponseDto {
     private String message;
+
+
 }

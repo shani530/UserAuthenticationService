@@ -12,6 +12,14 @@ import lombok.Setter;
 @Getter
 @MappedSuperclass
 public class BaseModel {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     // auto generate id
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
