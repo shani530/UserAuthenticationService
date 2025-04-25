@@ -73,12 +73,8 @@ public class AuthController
             loginResponseDto.setId(loginResponse.getId());
             loginResponseDto.setEmail(loginResponse.getEmail());
             MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
-            headers.add("Authorization", "Bearer " + loginResponse.getToken());
-            headers.add("Content-Type", "application/json");
-            headers.add("Access-Control-Expose-Headers", "Authorization");
-            headers.add("Access-Control-Allow-Origin", "*");
-            headers.add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-            headers.add(HttpHeaders.COOKIE, "token=" + loginResponse.getToken());
+
+            headers.add(HttpHeaders.COOKIE, loginResponse.getToken());
 
 
             return new ResponseEntity<>(loginResponseDto, headers, HttpStatus.OK);
