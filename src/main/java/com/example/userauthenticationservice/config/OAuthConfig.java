@@ -92,7 +92,7 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
             return http.build();
         }
 
-        @Bean
+/*        @Bean
         public UserDetailsService userDetailsService() {
             UserDetails userDetails = User.builder()
                     .username("user")
@@ -101,7 +101,7 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
                     .build();
 
             return new InMemoryUserDetailsManager(userDetails);
-        }
+        }*/
 
         @Bean
         public RegisteredClientRepository registeredClientRepository() {
