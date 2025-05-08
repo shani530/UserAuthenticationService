@@ -28,14 +28,14 @@ public class SecurityConfig {
                 .anyRequest().authenticated();
         return http.build();
     }*/
-/*    @Bean
+    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf().disable() // Disable CSRF protection if not needed
             .authorizeHttpRequests()
             .anyRequest().permitAll(); // Allow all requests without authentication
         return http.build();
-    }*/
+    }
 
     @Bean
     public SecretKey secretKey() {

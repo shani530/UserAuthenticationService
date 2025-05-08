@@ -48,8 +48,8 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
         @Autowired
         BCryptPasswordEncoder bCryptPasswordEncoder;
 
-        @Bean
-        @Order(1)
+       // @Bean
+/*        @Order(1)
         public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http)
                 throws Exception {
             OAuth2AuthorizationServerConfigurer authorizationServerConfigurer =
@@ -90,7 +90,7 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
                     .formLogin(Customizer.withDefaults());
 
             return http.build();
-        }
+        }*/
 
 /*        @Bean
         public UserDetailsService userDetailsService() {
@@ -103,7 +103,7 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
             return new InMemoryUserDetailsManager(userDetails);
         }*/
 
-        @Bean
+        /*@Bean
         public RegisteredClientRepository registeredClientRepository() {
             RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
                     .clientId("oidc-client")
@@ -155,7 +155,7 @@ import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
         @Bean
         public AuthorizationServerSettings authorizationServerSettings() {
             return AuthorizationServerSettings.builder().build();
-        }
+        }*/
 
     }
 

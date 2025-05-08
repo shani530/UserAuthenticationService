@@ -28,6 +28,8 @@ public class AuthController
     private IAuthService iAuthService;
 
     // add signup , logout and login methods here
+
+
     @PostMapping("/signup")
     public ResponseEntity<SignUpResponseDto> signup(@RequestBody SignupRequestDto signupRequestDto) throws Exception {
         String email = signupRequestDto.getEmail();

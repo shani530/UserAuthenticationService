@@ -1,5 +1,6 @@
 package com.example.userauthenticationservice.service;
 
+import com.example.userauthenticationservice.model.Role;
 import com.example.userauthenticationservice.model.User;
 import com.example.userauthenticationservice.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.Optional;
 public class CustomUserServiceImpl implements UserDetailsService {
 
     @Autowired
-    UserRepo  userRepo;
+    UserRepo userRepo;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -29,8 +30,21 @@ public class CustomUserServiceImpl implements UserDetailsService {
         return new CustomerUserDetail(user);
 
     }
+
+    public User getUser(Long id) {
+        // get the user from the database
+        Optional<User> optionalUser = userRepo.findById(id);
+        if (optionalUser.isEmpty()) {
+            return null;
+        }
+        User user = optionalUser.get();
+        return user;
+
+    }
+}
+
     // add a method to save the user
 
 
 
-}
+

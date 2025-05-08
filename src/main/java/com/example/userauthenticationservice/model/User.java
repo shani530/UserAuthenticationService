@@ -2,6 +2,8 @@ package com.example.userauthenticationservice.model;
 
 import jakarta.persistence.Entity;
 
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,7 +20,9 @@ public class User extends BaseModel{
     private String email;
     private String phone;
     private String address;
+    @Enumerated(EnumType.STRING)
     private  Status status;
+    @Enumerated(EnumType.STRING)
     private  Role role;
 
     public String getFirstName() {
